@@ -1,10 +1,12 @@
 import Dependencies._
 
-ThisBuild / scalaVersion := "2.13.7"
-ThisBuild / version := "0.1.0-SNAPSHOT"
-ThisBuild / versionScheme := Some("early-semver")
-ThisBuild / organization := "com.mattjp.trie"
-ThisBuild / organizationName := "mattjp"
+Global / lintUnusedKeysOnLoad := false
+
+ThisBuild / scalaVersion         := "2.13.7"
+ThisBuild / version              := "0.1.0-SNAPSHOT"
+ThisBuild / versionScheme        := Some("early-semver")
+ThisBuild / organization         := "io.github.mattjp"
+ThisBuild / organizationName     := "mattjp"
 ThisBuild / organizationHomepage := Some(url("http://github.com/mattjp/"))
 
 ThisBuild / scmInfo := Some(
@@ -24,23 +26,17 @@ ThisBuild / developers := List(
 )
 
 ThisBuild / description := "Trie data structure for Scala."
-ThisBuild / licenses := List("GNU GPL 3" -> new URL("https://www.gnu.org/licenses/gpl-3.0.en.html"))
-ThisBuild / homepage := Some(url("https://github.com/mattjp/scala-trie"))
+ThisBuild / licenses    := List("GNU GPL 3" -> new URL("https://www.gnu.org/licenses/gpl-3.0.en.html"))
+ThisBuild / homepage    := Some(url("https://github.com/mattjp/scala-trie"))
 
 // Remove all additional repository other than Maven Central from POM
 ThisBuild / pomIncludeRepository := { _ => false }
+ThisBuild / publishMavenStyle := true
 ThisBuild / publishTo := {
-  val nexus = "https://oss.sonatype.org/"
+  val nexus = "https://s01.oss.sonatype.org/"
   if (isSnapshot.value) Some("snapshots" at nexus + "content/repositories/snapshots")
   else Some("releases" at nexus + "service/local/staging/deploy/maven2")
 }
-ThisBuild / publishMavenStyle := true
-
-
-
-//updateOptions := updateOptions.value.withGigahorse(false)
-
-
 
 lazy val root = (project in file("."))
   .settings(
