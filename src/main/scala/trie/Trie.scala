@@ -1,9 +1,9 @@
 package trie
 
-object Hello extends Greeting with App {
+object Trie extends Greeting with App {
   println(greeting)
 }
 
 trait Greeting {
-  lazy val greeting: String = "hello"
+  lazy val greeting: String = "I am trie."
 }

@@ -3,7 +3,7 @@ import Dependencies._
 Global / lintUnusedKeysOnLoad := false
 
 ThisBuild / scalaVersion         := "2.13.7"
-ThisBuild / version              := "0.1.0-SNAPSHOT"
+ThisBuild / version              := "0.2.0-SNAPSHOT"
 ThisBuild / versionScheme        := Some("early-semver")
 ThisBuild / organization         := "io.github.mattjp"
 ThisBuild / organizationName     := "mattjp"
@@ -40,7 +40,7 @@ ThisBuild / publishTo := {
 
 lazy val root = (project in file("."))
   .settings(
-    name := "scala-trie",
+    name := "scalaTrie",
     libraryDependencies += scalaTest % Test,
     credentials += Credentials(Path.userHome / ".sbt" / "sonatype_credentials")
   )
