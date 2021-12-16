@@ -1,4 +1,4 @@
-package trie
+package scalatrie
 
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
