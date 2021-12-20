@@ -1,4 +1,4 @@
-# scala-trie
+# scalaTrie
 
 An immutable [Trie](https://en.wikipedia.org/wiki/Trie) class written in Scala.
 
@@ -16,8 +16,9 @@ Add the library to Scala code:
 import trie.Trie
 
 val trie: Trie =  Trie().addMany(Seq("trie", "tree"))
+
 trie.validWord("trie") // true
-trie.validPrefix("tr") // true
 trie.validWord("tr")   // false
+trie.validPrefix("tr") // true
 trie.getSuffixes("tr") // ["ie", "ee"]
 ```
