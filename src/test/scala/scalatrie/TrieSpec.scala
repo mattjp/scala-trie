@@ -5,13 +5,15 @@ import org.scalatest.matchers.should.Matchers
 
 class TrieSpec extends AnyFlatSpec with Matchers {
 
-//  "The Trie object" when
-    "empty" should "add a single word" in {
-      val word: String = "tree"
-      val trie: Trie = Trie().add(word)
-      trie.validWord(word) shouldBe true
-    }
+  behavior of "An empty Trie"
 
+  val trie: Trie = Trie()
+
+  it should "add a single word" in {
+    val word: String = "tree"
+    trie.add(word)
+    trie.validWord(word) shouldBe true // add is dependent on validWord, and vice versa
+  }
 
 
 
