@@ -154,39 +154,3 @@ case class Trie(
   }
 
 }
-
-
-trait Greeting {
-  lazy val greeting: String = "I am trie."
-}
-
-object Trie2 extends Greeting with App {
-  println(greeting)
-
-  val words: Seq[String] = Seq("hello", "henlo", "hola", "hi")
-  val trie: Trie = Trie().addMany(words)
-//
-//  println(trie)
-//
-//  println(trie.validPrefix("hel")) // true
-//  println(trie.validPrefix("h")) // true
-//  println(trie.validPrefix("hola")) // true
-//  println(trie.validPrefix("holb")) // false
-//
-//  println(trie.getSuffixes(trie.traverse("h").get))
-
-
-  val (b, t) = trie.removeMany(Seq("henlo", "hi", "hols"))
-  println(b)
-  println(t.validWord("henlo"))
-  println(t.validPrefix("henlo"))
-  println(t.validWord("hi"))
-  println(t.validPrefix("hi"))
-  println(t.validWord("hola"))
-  println(t.getSuffixes())
-
-//  val t: Trie = Trie()
-//  val u: Trie = t.add("hello")
-//  val v: Trie = u.add("henlo")
-
-}
