@@ -1,6 +1,6 @@
 # ScalaTrie
 
-An immutable [Trie](https://en.wikipedia.org/wiki/Trie) class written in Scala.
+An immutable and purely functional [Trie](https://en.wikipedia.org/wiki/Trie) class written in Scala.
 
 ## Usage
 
