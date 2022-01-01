@@ -1,4 +1,4 @@
-# scalaTrie
+# ScalaTrie
 
 An immutable [Trie](https://en.wikipedia.org/wiki/Trie) class written in Scala.
 
@@ -7,7 +7,7 @@ An immutable [Trie](https://en.wikipedia.org/wiki/Trie) class written in Scala.
 Add the library to `build.sbt` dependencies:
 
 ```scala
-libraryDependencies += "io.github.mattjp" %% "scalatrie" % "1.0.0"
+libraryDependencies += "io.github.mattjp" %% "scalatrie" % "1.0.1"
 ```
 
 Add the library to Scala code:
